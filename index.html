@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERMODINÂMICA & INFRAVERMELHO // CEP 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Editorial Top Bar -->
+  <nav class="editorial-nav">
+    <div class="nav-brand">CEP / FISICA TÉRMICA</div>
+    <div class="nav-tag">PESQUISA 2º ANO EM — 2026</div>
+    <div class="nav-links">
+      <a href="#contexto">01. CONTEXTO</a>
+      <a href="#historia">02. HISTÓRIA</a>
+      <a href="#termodinamica">03. FÍSICA</a>
+      <a href="#simulador">04. SIMULADOR</a>
+      <a href="#roteiro">05. ROTEIRO</a>
+    </div>
+  </nav>
+
+  <!-- Big Graphic Hero -->
+  <header class="hero-editorial">
+    <div class="hero-watermark">INFRARED</div>
+    <div class="hero-content">
+      <div class="badge-rosewood">COLÉGIO ESTADUAL DO PARANÁ</div>
+      <h1 class="mega-title">RADIAÇÃO & PERDA TÉRMICA</h1>
+      <p class="hero-subtitle">ESTUDO DA EFICIÊNCIA ENERGÉTICA EM PISCINAS NO CLIMA DE CURITIBA</p>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    
+    <!-- 01. CONTEXTO DA PISCINA CEP -->
+    <section id="contexto" class="editorial-card card-rosewood">
+      <div class="card-header">
+        <span class="step-num">01</span>
+        <h2>CONTEXTO REAL: O COMPLEXO DO CEP</h2>
+      </div>
+      <div class="editorial-grid">
+        <div class="grid-text">
+          <p class="lead-text">O Colégio Estadual do Paraná (CEP), inaugurado em sua sede atual no Alto da Glória em 1950, conta com uma vasta estrutura desportiva que inclui parque aquático e piscinas históricas.</p>
+          <p>Curitiba apresenta um clima subtropical úmido (Cfb), marcado por noites frias e grande variação de temperatura. Manter a água aquecida gera um alto consumo de energia elétrica e gás, exigindo uma análise rigorosa das frentes de perda de calor.</p>
+        </div>
+        <div class="image-editorial-box">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Piscina olímpica aquecida" class="editorial-img">
+          <span class="img-caption">COMPLEXO AQUÁTICO / PERDA TÉRMICA DE SUPERFÍCIE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. HISTÓRIA DE HERSCHEL -->
+    <section id="historia" class="editorial-card card-blue">
+      <div class="card-header">
+        <span class="step-num">02</span>
+        <h2>DESCOBERTA HISTÓRICA: WILLIAM HERSCHEL (1800)</h2>
+      </div>
+      <div class="editorial-grid reverse">
+        <div class="image-editorial-box">
+          <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Prisma de luz e espectro" class="editorial-img">
+          <span class="img-caption">ESPECTRO ELETROMAGNÉTICO / RADIAÇÃO CALORÍFICA</span>
+        </div>
+        <div class="grid-text">
+          <p class="lead-text">Em 1800, o astrônomo William Herschel realizou uma experiência marcante utilizando um prisma de vidro para decompor a luz solar.</p>
+          <p>Ao colocar termômetros em cada cor, percebeu que a temperatura subia da faixa do violeta ao vermelho. Ao posicionar o termômetro <em>além do vermelho visível</em>, registrou o maior pico de temperatura: havia descoberto os raios caloríficos, a <strong>radiação infravermelha</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. MECANISMOS TERMODINÂMICOS -->
+    <section id="termodinamica" class="editorial-card card-rosewood">
+      <div class="card-header">
+        <span class="step-num">03</span>
+        <h2>MECANISMOS DE PERDA TÉRMICA</h2>
+      </div>
+      <div class="three-col-grid">
+        <div class="col-item">
+          <div class="col-badge">50% a 70%</div>
+          <h3>EVAPORAÇÃO</h3>
+          <p>As moléculas com maior energia cinética escapam em forma de vapor, retirando calor latente da piscina e resfriando o volume restante.</p>
+        </div>
+        <div class="col-item highlight-col">
+          <div class="col-badge pink-bg">10% a 30%</div>
+          <h3>RADIAÇÃO INFRAVERMELHA</h3>
+          <p>A água (a ~28°C) emite radiação eletromagnética contínua na faixa do infravermelho longo diretamente para o céu noturno frio de Curitiba.</p>
+        </div>
+        <div class="col-item">
+          <div class="col-badge">10% a 20%</div>
+          <h3>CONDUÇÃO E CONVECÇÃO</h3>
+          <p>O ar frio curitibano e a ação dos ventos removem calor da superfície por contato direto e correntes térmicas de convecção.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. SIMULADOR INTERATIVO -->
+    <section id="simulador" class="editorial-card card-blue">
+      <div class="card-header">
+        <span class="step-num">04</span>
+        <h2>SIMULADOR: LEI DE STEFAN-BOLTZMANN ($E \propto T^4$)</h2>
+      </div>
+      <div class="simulator-wrapper">
+        <div class="sim-controls">
+          <div class="control-box">
+            <label for="tempInput">TEMPERATURA DA PISCINA: <span id="tempVal">28</span>°C</label>
+            <input type="range" id="tempInput" min="10" max="42" value="28">
+          </div>
+          <div class="control-box">
+            <label for="airInput">TEMPERATURA AMBIENTE (CURITIBA): <span id="airVal">12</span>°C</label>
+            <input type="range" id="airInput" min="2" max="25" value="12">
+          </div>
+        </div>
+
+        <div class="sim-display">
+          <div class="sim-visual" id="simVisual">
+            <div class="thermal-overlay" id="thermalOverlay"></div>
+            <div class="sim-text-overlay">
+              <span class="readout-label">EMISSÃO RADIATIVA ESTIMADA</span>
+              <span class="readout-val" id="radReadout">142 W/m²</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ROTEIRO DE SLIDES DA APRESENTAÇÃO -->
+    <section id="roteiro" class="editorial-card card-rosewood">
+      <div class="card-header">
+        <span class="step-num">05</span>
+        <h2>ROTEIRO SUGERIDO PARA A APRESENTAÇÃO</h2>
+      </div>
+      <div class="slides-list">
+        <div class="slide-row">
+          <span class="slide-no">SLIDE 01</span>
+          <div class="slide-info">
+            <h4>Capa & Identificação</h4>
+            <p>Título do projeto, integrantes do grupo, 2º Ano do Ensino Médio do Colégio Estadual do Paraná (CEP).</p>
+          </div>
+        </div>
+        <div class="slide-row">
+          <span class="slide-no">SLIDE 02</span>
+          <div class="slide-info">
+            <h4>Contexto Local</h4>
+            <p>O clima de Curitiba e a importância da gestão energética na estrutura desportiva do CEP.</p>
+          </div>
+        </div>
+        <div class="slide-row">
+          <span class="slide-no">SLIDE 03</span>
+          <div class="slide-info">
+            <h4>A Descoberta do Infravermelho</h4>
+            <p>O experimento de William Herschel (1800) com prisma e termômetros além do vermelho visível.</p>
+          </div>
+        </div>
+        <div class="slide-row">
+          <span class="slide-no">SLIDE 04</span>
+          <p>Mecanismos Termodinâmicos: Evaporação vs. Radiação Infravermelha vs. Convecção.</p>
+        </div>
+        <div class="slide-row">
+          <span class="slide-no">SLIDE 05</span>
+          <p>A Lei de Stefan-Boltzmann ($E \propto T^4$) e a retenção de calor por capas térmicas.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="editorial-footer">
+    <p>PESQUISA ELABORADA PARA O 2º ANO EM — COLÉGIO ESTADUAL DO PARANÁ (CEP) — CURITIBA / PR</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

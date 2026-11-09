@@ -1,0 +1,419 @@
+/* ==================================================
+   PALETA EXATA SOLICITADA:
+   - Rosewood: #70020F
+   - Misty Rose: #FFDEE2
+   - Pantone 280C (Electric Blue / Deep Navy): #001960
+   ================================================== */
+
+:root {
+  --rosewood: #70020F;
+  --rosewood-dark: #4a0109;
+  --misty-rose: #FFDEE2;
+  --electric-blue: #001960;
+  --electric-blue-dark: #000f3d;
+
+  --bg-color: #040812;
+  --text-main: #FFDEE2;
+  --text-muted: #b8c1ec;
+  
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Nav Superior */
+.editorial-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0, 25, 96, 0.95);
+  border-bottom: 2px solid var(--rosewood);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--misty-rose);
+}
+
+.nav-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--misty-rose);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Hero Editorial */
+.hero-editorial {
+  position: relative;
+  padding: 110px 40px 90px;
+  background: linear-gradient(135deg, var(--rosewood) 0%, var(--electric-blue) 100%);
+  border-bottom: 5px solid var(--rosewood-dark);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(6rem, 22vw, 22rem);
+  color: rgba(255, 222, 226, 0.04);
+  letter-spacing: -5px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.badge-rosewood {
+  display: inline-block;
+  background: var(--misty-rose);
+  color: var(--rosewood);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 6px 18px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.mega-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 3px 3px 0px var(--rosewood-dark);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--misty-rose);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Layout Principal */
+.main-layout {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Cards Editoriais */
+.editorial-card {
+  border: 3px solid #000;
+  padding: 40px;
+  position: relative;
+  box-shadow: 10px 10px 0px #000;
+}
+
+.card-rosewood {
+  background-color: var(--rosewood);
+  border-color: var(--rosewood-dark);
+}
+
+.card-blue {
+  background-color: var(--electric-blue);
+  border-color: var(--electric-blue-dark);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 222, 226, 0.2);
+  padding-bottom: 15px;
+}
+
+.step-num {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: var(--misty-rose);
+  line-height: 1;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Grids de Conteúdo */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.editorial-grid.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--misty-rose);
+}
+
+.image-editorial-box {
+  position: relative;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  overflow: hidden;
+  background: #000;
+}
+
+.editorial-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%) contrast(110%);
+  transition: transform 0.4s ease;
+}
+
+.image-editorial-box:hover .editorial-img {
+  transform: scale(1.04);
+}
+
+.img-caption {
+  display: block;
+  background: #000;
+  color: var(--misty-rose);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+}
+
+/* Colunas 3 Itens */
+.three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.col-item {
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 222, 226, 0.2);
+  padding: 25px;
+}
+
+.highlight-col {
+  border-color: var(--misty-rose);
+  background: rgba(112, 2, 15, 0.5);
+}
+
+.col-badge {
+  display: inline-block;
+  background: var(--electric-blue);
+  color: var(--misty-rose);
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--misty-rose);
+}
+
+.col-badge.pink-bg {
+  background: var(--misty-rose);
+  color: var(--rosewood);
+}
+
+.col-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Simulador */
+.simulator-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sim-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.control-box label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  color: var(--misty-rose);
+}
+
+input[type=range] {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--misty-rose);
+  cursor: pointer;
+}
+
+.sim-display {
+  border: 2px solid var(--misty-rose);
+  background: #000;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sim-visual {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--electric-blue) 0%, var(--electric-blue-dark) 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thermal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(112, 2, 15, 0.6) 0%, transparent 70%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.sim-text-overlay {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  background: rgba(0, 25, 96, 0.9);
+  padding: 15px 30px;
+  border: 2px solid var(--misty-rose);
+}
+
+.readout-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.readout-val {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--misty-rose);
+}
+
+/* Lista Roteiro */
+.slides-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slide-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 18px 25px;
+  border-left: 4px solid var(--misty-rose);
+}
+
+.slide-no {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--misty-rose);
+  white-space: nowrap;
+}
+
+/* Rodapé */
+.editorial-footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--electric-blue-dark);
+  border-top: 3px solid var(--rosewood);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--misty-rose);
+}
+
+@media (max-width: 768px) {
+  .editorial-grid, .editorial-grid.reverse, .sim-controls {
+    grid-template-columns: 1fr;
+  }
+  .editorial-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
