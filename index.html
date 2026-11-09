@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#001960">
+  <meta name="description" content="Uma investigação visual sobre radiação infravermelha, transferência de calor e perda de energia em piscinas, com estudo de caso do Colégio Estadual do Paraná.">
+  <title>Calor Invisível — Física & Piscinas | CEP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-fill"></span></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Calor Invisível, início">
+      <span class="brand-mark">CI<span>°</span></span>
+      <span class="brand-name">LABORATÓRIO<br><b>CEP</b></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#infravermelho">O invisível</a>
+      <a href="#perdas">Perda de calor</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#cep">O CEP</a>
+      <a href="#fontes">Fontes</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">☾</span><span id="theme-label">MODO NOTURNO</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> FÍSICA APLICADA · 2º ANO EM</p>
+        <p class="hero-kicker">DOSSIÊ 01 <span>—</span> ENERGIA TÉRMICA</p>
+        <h1>CALOR<br><em>INVISÍVEL.</em></h1>
+        <p class="hero-subtitle">O que acontece com a energia de uma piscina quando a água esfria?</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#infravermelho">Entrar na investigação <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#cep">Começar pelo CEP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span class="pulse-dot"></span> UMA INVESTIGAÇÃO SOBRE O QUE OS OLHOS NÃO VEEM</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-frame">
+          <img src="https://www.cep.pr.gov.br/sites/cep/arquivos_restritos/files/imagem/2025-04/emenda_parlamentar_piscina_3_0.jpg" alt="Estudantes praticando natação na piscina do Colégio Estadual do Paraná" fetchpriority="high">
+          <div class="photo-stamp">CURITIBA<br><b>PR · BR</b></div>
+          <div class="thermal-tag"><span class="thermal-dot"></span> SUPERFÍCIE EM<br>OBSERVAÇÃO</div>
+        </div>
+        <div class="orbit orbit-a" aria-hidden="true"></div>
+        <div class="orbit orbit-b" aria-hidden="true"></div>
+        <span class="hero-cross cross-one" aria-hidden="true">＋</span>
+        <span class="hero-cross cross-two" aria-hidden="true">×</span>
+        <div class="hero-side-label">A ENERGIA NÃO SOME. ELA SE TRANSFERE.</div>
+      </div>
+      <div class="hero-bottomline"><span>01 / 06</span><span>RADIAÇÃO · TRANSFERÊNCIA · EFICIÊNCIA</span><span>ROLE PARA EXPLORAR ↓</span></div>
+      <div class="hero-decoration" aria-hidden="true">IR</div>
+    </section>
+
+    <section class="intro-section section-shell section-light" id="pergunta">
+      <div class="section-index">[ A PERGUNTA ]</div>
+      <div class="intro-grid">
+        <div class="intro-heading reveal">
+          <p class="eyebrow eyebrow-dark">ANTES DE TUDO</p>
+          <h2>Uma piscina é<br>um <em>sistema</em><br>de energia.</h2>
+        </div>
+        <div class="intro-text reveal">
+          <p class="lead-text">Quando a água está mais quente que o ambiente, ela tende a transferir energia térmica para fora.</p>
+          <p>Essa energia não desaparece magicamente: ela é transferida para o ar, para as superfícies ao redor ou acompanha a água que evapora. A temperatura diminui quando a água perde energia interna.</p>
+          <p>Nossa investigação acompanha esse caminho — com atenção especial à <strong>radiação infravermelha</strong>, uma forma de transferência de energia que acontece mesmo sem contato físico.</p>
+          <a class="inline-arrow" href="#infravermelho">Entenda o infravermelho <span>↘</span></a>
+        </div>
+      </div>
+      <div class="stat-strip reveal">
+        <div class="stat-item"><span class="stat-number">04</span><span class="stat-label">mecanismos principais<br>de transferência</span></div>
+        <div class="stat-item"><span class="stat-number">1800</span><span class="stat-label">ano da identificação<br>do infravermelho</span></div>
+        <div class="stat-item"><span class="stat-number">50–60%</span><span class="stat-label">perda de calor associada<br>à evaporação, em muitos casos</span></div>
+        <div class="stat-item stat-sticker"><span>FÍSICA<br>NO<br>MUNDO<br>REAL</span><b aria-hidden="true">✳</b></div>
+      </div>
+    </section>
+
+    <section class="infrared-section section-shell" id="infravermelho">
+      <div class="section-index section-index-light">[ 01 — O INVISÍVEL ]</div>
+      <div class="split-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> ESPECTRO ELETROMAGNÉTICO</p>
+          <h2>Não é magia.<br>É <em>radiação.</em></h2>
+        </div>
+        <p class="heading-aside">A radiação infravermelha é uma forma de onda eletromagnética. Ela está além do vermelho que conseguimos enxergar — por isso, nossos olhos não a detectam.</p>
+      </div>
+
+      <div class="spectrum-card reveal">
+        <div class="spectrum-topline"><span>ESPECTRO ELETROMAGNÉTICO</span><span>COMPRIMENTO DE ONDA →</span></div>
+        <div class="spectrum-bar" role="img" aria-label="Espectro simplificado: ultravioleta, luz visível, infravermelho e micro-ondas">
+          <div class="spectrum-segment ultraviolet"><span>UV</span></div>
+          <div class="spectrum-segment visible"><span>VISÍVEL</span></div>
+          <div class="spectrum-segment infrared"><span>INFRAVERMELHO</span></div>
+          <div class="spectrum-segment microwave"><span>MICRO-ONDAS</span></div>
+        </div>
+        <div class="spectrum-labels"><span>Ondas menores</span><span>≈ 0,7 µm</span><span>Até 1 mm</span><span>Ondas maiores</span></div>
+        <div class="spectrum-caption"><span class="caption-marker"></span> O infravermelho ocupa aproximadamente a faixa de 0,7 a 1.000 micrômetros (µm). Os limites podem variar conforme a convenção adotada. <a href="https://earthobservatory.nasa.gov/glossary/infrared%20radiation" target="_blank" rel="noopener noreferrer">NASA · definição</a></div>
+      </div>
+
+      <div class="infrared-details">
+        <article class="detail-block reveal">
+          <span class="detail-number">A.</span>
+          <h3>Todo corpo emite</h3>
+          <p>Qualquer corpo com temperatura acima do zero absoluto emite radiação térmica. A intensidade e a distribuição dessa radiação dependem da temperatura e das características da superfície.</p>
+        </article>
+        <article class="detail-block reveal">
+          <span class="detail-number">B.</span>
+          <h3>O calor tem uma assinatura</h3>
+          <p>Uma piscina aquecida emite principalmente radiação infravermelha de onda longa. A água também absorve parte da energia que chega do Sol, inclusive em faixas do infravermelho solar.</p>
+        </article>
+        <article class="detail-block reveal">
+          <span class="detail-number">C.</span>
+          <h3>Invisível não é inexistente</h3>
+          <p>Uma câmera térmica detecta radiação infravermelha e transforma os dados em uma imagem colorida. As cores são uma escala de representação, não as cores reais do objeto.</p>
+        </article>
+      </div>
+
+      <div class="history-card reveal">
+        <div class="history-year">1800<span> / HISTÓRIA</span></div>
+        <div class="history-content">
+          <p class="eyebrow">UM EXPERIMENTO QUE MUDOU A FÍSICA</p>
+          <h3>William Herschel e a luz que não se via.</h3>
+          <p>Ao estudar a luz do Sol com um prisma, o astrônomo William Herschel colocou termômetros nas diferentes cores do espectro. Ao medir a região logo depois do vermelho — onde não havia luz visível — percebeu que a temperatura também aumentava. Ele concluiu que existia uma radiação invisível, hoje chamada infravermelha.</p>
+          <a class="inline-arrow" href="https://spark.iop.org/william-herschel-and-discovery-infra-red-radiation" target="_blank" rel="noopener noreferrer">Conhecer o experimento histórico <span>↗</span></a>
+        </div>
+        <div class="history-sticker" aria-hidden="true">O INVISÍVEL<br>REVELADO<span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="losses-section section-shell section-light" id="perdas">
+      <div class="section-index section-index-dark">[ 02 — PARA ONDE VAI O CALOR? ]</div>
+      <div class="loss-heading">
+        <p class="eyebrow eyebrow-dark">BALANÇO TÉRMICO</p>
+        <h2>Quatro saídas.<br><em>Uma piscina.</em></h2>
+        <p>Quando a água está mais quente que o entorno, diferentes processos podem retirar energia térmica. A importância de cada um muda com o clima, o vento, a umidade, a temperatura e o uso da piscina.</p>
+      </div>
+
+      <div class="loss-grid">
+        <article class="loss-card loss-feature reveal">
+          <div class="loss-card-top"><span>01 / A MAIS IMPORTANTE EM MUITOS CASOS</span><span class="loss-icon">≈</span></div>
+          <h3>Evaporação</h3>
+          <div class="loss-emphasis">50–60<span>%</span></div>
+          <p>Quando moléculas de água escapam da superfície e viram vapor, levam energia junto. É como se a água “pagasse” energia para mudar de estado físico.</p>
+          <div class="loss-bar"><span></span></div>
+          <small>Faixa indicada pela ASHRAE para muitos casos — não é uma porcentagem universal.</small>
+        </article>
+        <article class="loss-card reveal">
+          <div class="loss-card-top"><span>02 / CONTATO COM O AR</span><span class="loss-icon">↗</span></div>
+          <h3>Convecção</h3>
+          <p>O ar em contato com a água recebe calor e se movimenta. O vento renova o ar junto à superfície e pode intensificar essa troca térmica.</p>
+          <div class="mini-visual convection-visual" aria-hidden="true"><i></i><i></i><i></i><b>AR</b></div>
+        </article>
+        <article class="loss-card reveal">
+          <div class="loss-card-top"><span>03 / SEM ENCOSTAR</span><span class="loss-icon">⌁</span></div>
+          <h3>Radiação</h3>
+          <p>A superfície da água emite radiação infravermelha. Se o céu e as superfícies ao redor estiverem radiativamente mais frios, a troca líquida tende a retirar energia da piscina.</p>
+          <div class="mini-visual radiation-visual" aria-hidden="true"><span></span><span></span><span></span><b>IR</b></div>
+        </article>
+        <article class="loss-card reveal">
+          <div class="loss-card-top"><span>04 / ATRAVÉS DA ESTRUTURA</span><span class="loss-icon">▤</span></div>
+          <h3>Condução</h3>
+          <p>O calor atravessa materiais em contato com a água, como paredes e fundo. Em piscinas enterradas, costuma ser menor que as perdas pela superfície, mas depende das condições do solo e da construção.</p>
+          <div class="mini-visual conduction-visual" aria-hidden="true"><i></i><i></i><i></i><b>SOLO</b></div>
+        </article>
+      </div>
+
+      <div class="solar-note reveal">
+        <div class="solar-symbol" aria-hidden="true">☼</div>
+        <div><strong>Mas o Sol também pode devolver energia.</strong><p>A radiação solar absorvida pela água é um ganho térmico. Durante o dia, esse ganho pode compensar parte das perdas; à noite, sem a entrada solar, o balanço muda.</p></div>
+        <span class="solar-arrow" aria-hidden="true">↗</span>
+      </div>
+    </section>
+
+    <section class="radiation-section section-shell" id="fisica">
+      <div class="section-index section-index-light">[ 03 — A FÍSICA POR TRÁS ]</div>
+      <div class="radiation-layout">
+        <div class="radiation-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> LEI DE STEFAN–BOLTZMANN</p>
+          <h2>O céu também<br>entra na <em>conta.</em></h2>
+          <p>A água não troca radiação apenas com o ar. Ela também “enxerga” radiativamente o céu, as paredes e outras superfícies ao redor. Em uma noite clara, a temperatura radiativa efetiva do céu pode ser bem menor que a temperatura do ar, aumentando a perda líquida de energia.</p>
+          <div class="formula-box">
+            <span class="formula-label">FLUXO RADIATIVO LÍQUIDO</span>
+            <div class="formula">q = ε · σ · (T<sub>água</sub><sup>4</sup> − T<sub>entorno</sub><sup>4</sup>)</div>
+            <p>Temperaturas em kelvin (K). O resultado é dado em watts por metro quadrado (W/m²).</p>
+            <button class="copy-formula" id="copy-formula" type="button">COPIAR FÓRMULA <span aria-hidden="true">⧉</span></button>
+            <span class="copy-status" id="copy-status" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="radiation-notes">
+          <div class="note-line reveal"><span>ε</span><div><strong>Emissividade</strong><p>Indica o quanto uma superfície emite radiação comparada a um emissor ideal. Para a água, o Inmetro indica valor aproximado de 0,96 em comprimentos de onda infravermelhos acima de 2 µm.</p></div></div>
+          <div class="note-line reveal"><span>σ</span><div><strong>Constante de Stefan–Boltzmann</strong><p>É uma constante física: 5,670 × 10⁻⁸ W·m⁻²·K⁻⁴. Ela aparece na relação entre temperatura e emissão térmica de um corpo ideal.</p></div></div>
+          <div class="note-line reveal"><span>T⁴</span><div><strong>Temperatura absoluta</strong><p>A temperatura aparece elevada à quarta potência. Por isso, a troca radiativa cresce de maneira não linear — e a conta deve usar kelvin, não Celsius.</p></div></div>
+          <a class="source-chip" href="https://www.gov.br/cdtn/pt-br/centrais-de-conteudo/documentos-cgcre-abnt-nbr-iso-iec-17025/doq-cgcre-054" target="_blank" rel="noopener noreferrer">REFERÊNCIA TÉCNICA · INMETRO / CGCRE ↗</a>
+        </div>
+      </div>
+      <div class="night-callout reveal"><span class="night-icon">☾</span><p><strong>Por que uma noite limpa pode esfriar mais a piscina?</strong> Porque a superfície pode perder energia por radiação para um céu com temperatura radiativa efetiva baixa. Nuvens e umidade alteram essa troca.</p><span class="night-stamp">OLHE<br>PARA<br>CIMA.</span></div>
+    </section>
+
+    <section class="simulator-section section-shell section-light" id="simulador">
+      <div class="section-index section-index-dark">[ 04 — TESTE OS NÚMEROS ]</div>
+      <div class="simulator-heading">
+        <div><p class="eyebrow eyebrow-dark">LABORATÓRIO INTERATIVO</p><h2>Faça a conta.<br><em>Mude o cenário.</em></h2></div>
+        <p>Altere as temperaturas e a área hipotética para observar como muda a troca radiativa. O cálculo considera somente a radiação infravermelha de onda longa — não inclui evaporação, convecção, condução ou ganho solar.</p>
+      </div>
+
+      <div class="simulator-panel reveal">
+        <div class="simulator-controls">
+          <div class="simulator-panel-head"><span>PAINEL DE CONTROLE</span><span class="live-indicator"><i></i> AO VIVO</span></div>
+          <label class="range-control" for="water-temp">
+            <span class="range-title">Temperatura da água <b id="water-temp-value">28 °C</b></span>
+            <input id="water-temp" type="range" min="15" max="40" value="28" step="1">
+            <span class="range-limits"><small>15 °C</small><small>40 °C</small></span>
+          </label>
+          <label class="range-control" for="sky-temp">
+            <span class="range-title">Temperatura radiativa efetiva do entorno <b id="sky-temp-value">15 °C</b></span>
+            <input id="sky-temp" type="range" min="-10" max="30" value="15" step="1">
+            <span class="range-limits"><small>−10 °C</small><small>30 °C</small></span>
+          </label>
+          <label class="range-control" for="pool-area">
+            <span class="range-title">Área de superfície considerada <b id="pool-area-value">50 m²</b></span>
+            <input id="pool-area" type="range" min="1" max="200" value="50" step="1">
+            <span class="range-limits"><small>1 m²</small><small>200 m²</small></span>
+          </label>
+          <label class="range-control" for="hours">
+            <span class="range-title">Tempo de exposição <b id="hours-value">8 h</b></span>
+            <input id="hours" type="range" min="1" max="24" value="8" step="1">
+            <span class="range-limits"><small>1 h</small><small>24 h</small></span>
+          </label>
+          <div class="simulator-footnote">MODELO SIMPLIFICADO · ε = 0,96 · σ = 5,670 × 10⁻⁸ W·m⁻²·K⁻⁴</div>
+        </div>
+        <div class="simulator-result">
+          <div class="result-top"><span>RESULTADO DO CENÁRIO</span><span class="result-symbol">↗</span></div>
+          <div class="pool-illustration" aria-hidden="true">
+            <div class="pool-surface"><i></i><i></i><i></i><i></i></div>
+            <div class="ir-rays"><span></span><span></span><span></span></div>
+            <div class="pool-edge"></div>
+          </div>
+          <p class="result-label" id="result-direction">PERDA LÍQUIDA POR RADIAÇÃO</p>
+          <div class="result-main"><strong id="radiative-flux">72,45</strong><span>W/m²</span></div>
+          <div class="result-divider"></div>
+          <div class="result-pair"><span>Potência radiativa estimada</span><strong id="radiative-power">3,62 kW</strong></div>
+          <div class="result-pair"><span>Energia em <b id="result-hours">8 h</b></span><strong id="radiative-energy">28,98 kWh</strong></div>
+          <p class="result-explanation" id="result-explanation">Neste cenário, a água está radiativamente mais quente que o entorno. A troca líquida favorece a saída de energia da superfície.</p>
+        </div>
+      </div>
+      <div class="model-warning reveal"><span>!</span><p><strong>Importante:</strong> este simulador é didático. Ele mantém as temperaturas constantes durante todo o período e não representa uma medição da piscina do CEP. A temperatura radiativa efetiva do céu/entorno não é necessariamente igual à temperatura indicada por um termômetro de ar.</p></div>
+      <div class="example-strip reveal"><span class="example-label">EXEMPLO DE LEITURA</span><p>Com água a 28 °C e entorno radiativo a 15 °C, o fluxo calculado é de aproximadamente <strong>72 W/m²</strong>. Em 50 m², isso equivale a cerca de 3,6 kW de potência radiativa líquida naquele instante, sob as hipóteses do modelo.</p></div>
+    </section>
+
+    <section class="cep-section section-shell" id="cep">
+      <div class="section-index section-index-light">[ 05 — O NOSSO ESTUDO DE CASO ]</div>
+      <div class="cep-layout">
+        <div class="cep-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> COLÉGIO ESTADUAL DO PARANÁ</p>
+          <h2>Da teoria<br>para a <em>piscina.</em></h2>
+          <p>O CEP possui um Complexo Esportivo com piscina olímpica e piscina de aprendizagem. A estrutura faz parte das atividades esportivas oferecidas aos estudantes, incluindo a natação. Para situar a instituição: o colégio foi criado em 1846 e sua sede atual foi inaugurada em 1950, segundo a Agência Estadual de Notícias.</p>
+          <p>Em abril de 2025, o colégio anunciou a indicação de uma emenda parlamentar de <strong>R$ 850 mil</strong> para cobertura e sistema de aquecimento da piscina de aprendizagem. A notícia registra a destinação anunciada — não confirma, sozinha, a conclusão da obra.</p>
+          <a class="button button-outline" href="https://www.cep.pr.gov.br/Pagina/Esporte" target="_blank" rel="noopener noreferrer">Ver estrutura esportiva do CEP <span>↗</span></a>
+        </div>
+        <div class="cep-gallery">
+          <figure class="cep-photo-main reveal">
+            <img src="https://www.parana.pr.gov.br/sites/default/arquivos_restritos/files/styles/share/public/imagem/migrados/galeria/62017/image00012.jpg?itok=ajhUR-G2" alt="Vista aérea do Colégio Estadual do Paraná e de parte do seu complexo esportivo" loading="lazy">
+            <figcaption><span>01 / VISTA DO COMPLEXO</span><span>FOTO: JOSÉ FERNANDO OGURA / AEN</span></figcaption>
+          </figure>
+          <div class="cep-fact-card reveal"><span class="fact-card-label">INFRAESTRUTURA</span><strong>02</strong><p>piscinas mencionadas na página oficial: olímpica e de aprendizagem.</p><span class="fact-card-star">✳</span></div>
+          <div class="cep-investment-card reveal"><span class="fact-card-label">NOTÍCIA · 10 ABR 2025</span><strong>R$ 850 mil</strong><p>valor da emenda parlamentar indicada para cobertura e aquecimento da piscina de aprendizagem.</p><a href="https://www.cep.pr.gov.br/Noticia/CEP-tera-emenda-parlamentar-de-R-850-mil-para-cobertura-e-aquecimento-da-piscina-de" target="_blank" rel="noopener noreferrer">LER O ANÚNCIO OFICIAL ↗</a></div>
+        </div>
+      </div>
+      <div class="cep-question reveal"><span class="question-mark">?</span><div><p class="eyebrow">A PERGUNTA QUE CONECTA A FÍSICA À ESCOLA</p><h3>Como uma cobertura pode ajudar uma piscina a conservar energia?</h3><p>Uma cobertura flutuante reduz a evaporação e também pode diminuir a perda radiativa noturna. Uma estrutura que proteja a piscina do vento também pode reduzir a convecção. São soluções diferentes que atuam em mecanismos diferentes.</p></div></div>
+    </section>
+
+    <section class="solutions-section section-shell section-light" id="solucoes">
+      <div class="section-index section-index-dark">[ 06 — CIÊNCIA EM AÇÃO ]</div>
+      <div class="solutions-heading"><p class="eyebrow eyebrow-dark">EFICIÊNCIA ENERGÉTICA</p><h2>Menos perda.<br><em>Mais aproveitamento.</em></h2><p>As soluções mais eficientes combinam medidas: reduzir a fuga de calor e escolher uma fonte de aquecimento adequada.</p></div>
+      <div class="solutions-grid">
+        <article class="solution-card reveal"><span class="solution-number">01</span><div class="solution-symbol cover-symbol" aria-hidden="true">▱</div><h3>Cobertura térmica</h3><p>Uma capa que fica sobre a água dificulta a evaporação e reduz a exposição da superfície ao céu e ao ar. É uma das medidas mais efetivas para diminuir a demanda de aquecimento.</p><span class="solution-tag">EVAPORAÇÃO + RADIAÇÃO</span></article>
+        <article class="solution-card reveal"><span class="solution-number">02</span><div class="solution-symbol wind-symbol" aria-hidden="true">≋</div><h3>Proteção contra o vento</h3><p>Barreiras e fechamentos adequados reduzem a renovação do ar junto à superfície, diminuindo a troca por convecção. Em piscinas cobertas, umidade e ventilação também precisam ser controladas.</p><span class="solution-tag">CONVECÇÃO</span></article>
+        <article class="solution-card reveal"><span class="solution-number">03</span><div class="solution-symbol sun-symbol" aria-hidden="true">☼</div><h3>Aquecimento solar ou bomba de calor</h3><p>O aquecimento solar aproveita a energia do Sol. A bomba de calor transfere energia térmica do ar para a água, usando eletricidade para movimentar o sistema. A escolha depende do clima, uso e custo.</p><span class="solution-tag">ENTRADA DE ENERGIA</span></article>
+      </div>
+      <p class="solution-reference">A ASHRAE destaca que coberturas flutuantes podem reduzir perdas radiativas noturnas e evaporativas; também indica o uso de barreiras para reduzir perdas por convecção. <a href="https://handbook.ashrae.org/handbooks/A23/SI/a23_ch51/a23_ch51_si.aspx" target="_blank" rel="noopener noreferrer">ASHRAE Handbook ↗</a></p>
+    </section>
+
+    <section class="experiment-section section-shell" id="experimento">
+      <div class="section-index section-index-light">[ 07 — COMO INVESTIGAR ]</div>
+      <div class="experiment-layout">
+        <div class="experiment-copy"><p class="eyebrow"><span class="eyebrow-line"></span> PROPOSTA DE EXPERIMENTO</p><h2>Dois recipientes.<br><em>Uma hipótese.</em></h2><p>É possível montar uma experiência simples para observar como uma cobertura influencia o resfriamento da água. Ela não separa perfeitamente radiação, evaporação e convecção, mas permite comparar a conservação de energia em condições controladas.</p>
+          <div class="experiment-steps">
+            <div><b>01</b><p>Separe dois recipientes iguais, com o mesmo volume de água e temperatura inicial.</p></div>
+            <div><b>02</b><p>Deixe um recipiente aberto e cubra o outro com uma tampa leve, sem encostar na água.</p></div>
+            <div><b>03</b><p>Meça a temperatura com termômetro de contato em intervalos iguais, durante o mesmo período.</p></div>
+            <div><b>04</b><p>Compare as temperaturas e registre as condições do ambiente: vento, umidade e exposição solar.</p></div>
+          </div>
+        </div>
+        <div class="experiment-lab reveal">
+          <div class="lab-header"><span>FICHA DE OBSERVAÇÃO</span><span>EXPERIMENTO MODELO</span></div>
+          <div class="lab-drawing" aria-hidden="true"><div class="beaker beaker-open"><span class="waterline"></span><b>A</b><i>ABERTO</i></div><div class="beaker beaker-covered"><span class="waterline"></span><span class="lid"></span><b>B</b><i>COBERTO</i></div></div>
+          <div class="lab-caption"><span>MESMA ÁGUA</span><span>MESMO AMBIENTE</span><span>MEDIÇÕES IGUAIS</span></div>
+          <div class="lab-reminder"><span>!</span><p>Não é necessário entrar na piscina nem interferir nas atividades do CEP. Qualquer teste no espaço escolar precisa de autorização e supervisão. Para medir a temperatura da água, use uma sonda de contato adequada.</p></div>
+        </div>
+      </div>
+      <div class="measurement-note reveal"><span class="measurement-icon">IR</span><div><strong>Uma câmera térmica resolve tudo?</strong><p>Não. Ela observa a radiação da superfície, não a temperatura de toda a água. O USGS alerta que a água pode refletir infravermelho e gerar leituras aparentes incorretas. Para comparar a temperatura da água em profundidade, prefira um termômetro de contato.</p><a href="https://water.usgs.gov/usgs/espd/hgb/thermal-cam/index.html" target="_blank" rel="noopener noreferrer">USGS · limitações da termografia em água ↗</a></div></div>
+    </section>
+
+    <section class="curiosities-section section-shell section-light" id="curiosidades">
+      <div class="section-index section-index-dark">[ EXTRA — VOCÊ SABIA? ]</div>
+      <div class="curiosities-heading"><p class="eyebrow eyebrow-dark">PEQUENAS GRANDES DESCOBERTAS</p><h2>Fatos para<br><em>guardar.</em></h2></div>
+      <div class="curiosity-list">
+        <details class="curiosity-item" open><summary><span>01</span> Água também emite infravermelho?</summary><p>Sim. A água não precisa ferver para emitir radiação térmica. Basta estar acima do zero absoluto. O Inmetro indica emissividade aproximada de 0,96 para a água em comprimentos de onda infravermelhos acima de 2 µm.</p></details>
+        <details class="curiosity-item"><summary><span>02</span> Por que uma piscina perde mais calor quando está em uso?</summary><p>Movimento, agitação e respingos aumentam a área de água exposta ao ar e favorecem a evaporação. A quantidade exata depende da atividade e das condições ambientais.</p></details>
+        <details class="curiosity-item"><summary><span>03</span> O infravermelho só aparece à noite?</summary><p>Não. Corpos emitem radiação térmica continuamente. À noite fica mais fácil perceber o contraste em algumas situações porque a entrada de energia solar diminui.</p></details>
+        <details class="curiosity-item"><summary><span>04</span> Uma capa economiza energia mesmo sem aquecer a água?</summary><p>Sim. Ela não precisa adicionar calor para ser útil: ao reduzir a evaporação, ajuda a água a conservar a energia que já possui. Também reduz a troca radiativa noturna.</p></details>
+      </div>
+    </section>
+
+    <section class="quiz-section section-shell" id="quiz">
+      <div class="section-index section-index-light">[ CHECKPOINT ]</div>
+      <div class="quiz-layout">
+        <div class="quiz-intro"><p class="eyebrow"><span class="eyebrow-line"></span> TESTE SEU ENTENDIMENTO</p><h2>Você pegou<br><em>o calor?</em></h2><p>Responda às três questões e veja o que ficou da investigação.</p><div class="quiz-doodle" aria-hidden="true">✳<span>IR</span></div></div>
+        <div class="quiz-box reveal">
+          <div class="quiz-progress"><span id="quiz-progress-text">QUESTÃO 01 / 03</span><div><i id="quiz-progress-bar"></i></div></div>
+          <div id="quiz-content">
+            <h3 id="quiz-question">Qual mecanismo costuma representar a maior parcela da perda de calor de uma piscina?</h3>
+            <div class="quiz-options" id="quiz-options">
+              <button class="quiz-option" type="button" data-answer="a">A. Condução pelo fundo</button>
+              <button class="quiz-option" type="button" data-answer="b">B. Evaporação da água</button>
+              <button class="quiz-option" type="button" data-answer="c">C. Radiação visível</button>
+            </div>
+            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+            <button class="quiz-next" id="quiz-next" type="button" disabled>PRÓXIMA QUESTÃO <span>→</span></button>
+          </div>
+          <div class="quiz-final" id="quiz-final" hidden>
+            <span class="final-star">✳</span><p class="eyebrow">RESULTADO DA INVESTIGAÇÃO</p><strong id="quiz-score">0/3</strong><p id="quiz-result-text">Continue explorando o conteúdo!</p><button class="quiz-next" id="quiz-restart" type="button">REFAZER O QUIZ ↻</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusion-section section-shell section-light" id="conclusao">
+      <div class="section-index section-index-dark">[ FECHAMENTO ]</div>
+      <div class="conclusion-grid"><div><p class="eyebrow eyebrow-dark">A IDEIA CENTRAL</p><h2>Conservar energia<br>também é <em>ciência.</em></h2></div><div class="conclusion-text"><p class="lead-text">Uma piscina não esfria por um único motivo.</p><p>Evaporação, convecção, radiação e condução participam da transferência de energia. A radiação infravermelha é uma parte essencial desse balanço — acontece sem contato e varia conforme a temperatura da água e do entorno.</p><p>No caso do CEP, conhecer esses mecanismos ajuda a entender por que cobertura, proteção contra o vento e sistemas de aquecimento podem fazer diferença no uso dos espaços esportivos.</p><p class="conclusion-strong">A energia não desaparece. Entender para onde ela vai é o primeiro passo para usá-la melhor.</p></div></div>
+      <div class="presentation-script"><div><span class="script-label">FRASE PARA ENCERRAR A APRESENTAÇÃO</span><p>“A Física está acontecendo até quando parece que nada está acontecendo: mesmo em uma piscina parada, existe energia sendo transferida o tempo inteiro.”</p></div><button id="print-page" type="button" class="print-button">IMPRIMIR / SALVAR PDF ↗</button></div>
+    </section>
+
+    <section class="references-section section-shell" id="fontes">
+      <div class="section-index section-index-light">[ REFERÊNCIAS E CRÉDITOS ]</div>
+      <div class="references-heading"><p class="eyebrow"><span class="eyebrow-line"></span> PESQUISA DOCUMENTADA</p><h2>De onde vêm<br><em>os dados.</em></h2><p>As informações foram organizadas a partir de instituições científicas, órgãos públicos, entidade técnica de engenharia e registros oficiais do CEP.</p></div>
+      <div class="references-grid">
+        <a class="reference-card" href="https://www.cep.pr.gov.br/Pagina/Esporte" target="_blank" rel="noopener noreferrer"><span>01 / INSTITUIÇÃO</span><strong>Colégio Estadual do Paraná</strong><p>Página oficial do Departamento de Educação Física e Esportes; modalidades e estrutura do Complexo Esportivo.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://www.cep.pr.gov.br/Noticia/CEP-tera-emenda-parlamentar-de-R-850-mil-para-cobertura-e-aquecimento-da-piscina-de" target="_blank" rel="noopener noreferrer"><span>02 / NOTÍCIA OFICIAL</span><strong>CEP — emenda para piscina de aprendizagem</strong><p>Publicação de 10 de abril de 2025 sobre indicação de R$ 850 mil para cobertura e aquecimento.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://www.parana.pr.gov.br/aen/Noticia/Colegio-Estadual-passa-por-maior-reforma-da-sua-historia" target="_blank" rel="noopener noreferrer"><span>03 / AGÊNCIA ESTADUAL</span><strong>História e estrutura do CEP</strong><p>Reportagem sobre o edifício histórico, inaugurado em 1950, e sua área construída de 18 mil m².</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://handbook.ashrae.org/handbooks/A23/SI/a23_ch51/a23_ch51_si.aspx" target="_blank" rel="noopener noreferrer"><span>04 / ENGENHARIA</span><strong>ASHRAE Handbook</strong><p>Dimensionamento de aquecimento de piscinas; evaporação, convecção, radiação, condução e coberturas.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://www.gov.br/cdtn/pt-br/centrais-de-conteudo/documentos-cgcre-abnt-nbr-iso-iec-17025/doq-cgcre-054" target="_blank" rel="noopener noreferrer"><span>05 / METROLOGIA</span><strong>Inmetro / Cgcre — DOQ-CGCRE-054</strong><p>Orientações para calibração de termômetros infravermelhos; emissividade, radiação e água.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://earthobservatory.nasa.gov/glossary/infrared%20radiation" target="_blank" rel="noopener noreferrer"><span>06 / CIÊNCIA ESPACIAL</span><strong>NASA Earth Observatory</strong><p>Definição e faixa aproximada de comprimentos de onda da radiação infravermelha.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://spark.iop.org/william-herschel-and-discovery-infra-red-radiation" target="_blank" rel="noopener noreferrer"><span>07 / HISTÓRIA DA FÍSICA</span><strong>Institute of Physics — IOP Spark</strong><p>Experimento de William Herschel e identificação histórica do infravermelho em 1800.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://water.usgs.gov/usgs/espd/hgb/thermal-cam/index.html" target="_blank" rel="noopener noreferrer"><span>08 / OBSERVAÇÃO</span><strong>USGS — câmeras térmicas</strong><p>Princípios e limitações das câmeras infravermelhas em medições de superfícies de água.</p><b>ABRIR FONTE ↗</b></a>
+        <a class="reference-card" href="https://www.scielo.br/j/rbef/a/ggtW67HmNkyy8zGRJXPyvpP/?lang=pt" target="_blank" rel="noopener noreferrer"><span>09 / ARTIGO CIENTÍFICO</span><strong>Revista Brasileira de Ensino de Física</strong><p>Oliveira e Silva (2014): William Herschel, os raios invisíveis e as primeiras ideias sobre radiação infravermelha.</p><b>ABRIR FONTE ↗</b></a>
+      </div>
+      <div class="credits-line"><span>PROJETO ESCOLAR · FÍSICA · 2º ANO DO ENSINO MÉDIO</span><span>COLÉGIO ESTADUAL DO PARANÁ · CURITIBA</span><span>FIM DO DOSSIÊ / 2026</span></div>
+    </section>
+  </main>
+
+  <aside class="quick-dock" aria-label="Atalhos rápidos">
+    <a href="#simulador" aria-label="Ir para o simulador" title="Simulador">⌁</a>
+    <a href="#quiz" aria-label="Ir para o quiz" title="Quiz">?</a>
+    <a href="#topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
+  </aside>
+
+  <footer class="site-footer"><a class="footer-brand" href="#topo">CALOR <em>INVISÍVEL.</em></a><span>UM ESTUDO SOBRE O CAMINHO DA ENERGIA TÉRMICA.</span><a href="#topo">VOLTAR AO INÍCIO ↑</a></footer>
+</body>
+</html>
